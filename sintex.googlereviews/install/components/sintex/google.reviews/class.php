@@ -12,7 +12,6 @@ Loc::loadMessages(__FILE__);
 
 class GoogleReviews extends CBitrixComponent
 {
-
 	public function onPrepareComponentParams($arParams)
     {
         if(!isset($arParams["CACHE_TIME"]))
@@ -27,33 +26,6 @@ class GoogleReviews extends CBitrixComponent
         return $arParams;
     }
 
-	/*
-	protected function fetchPlaceId()
-	{
-		
-		$companyName = urlencode($this->arParams['COMPANY_NAME']);
-
-		$url = "https://maps.googleapis.com/maps/api/place/textsearch/json?query={$companyName}&sensor=true&key={$this->arParams['GOOGLE_PLACE_API_KEY']}";
-		
-		$httpClient = new HttpClient();
-		$httpClient->setHeader('Content-Type', 'application/json', true);
-		$httpClient->query(HttpClient::HTTP_GET, $url, $entityBody = null);
-		
-		$responseJSON = $httpClient->getResult();
-		$response = json_decode($responseJSON, true);
-		
-		if ($response['status'] === 'OK')
-		{
-		//	$this->setPlaceId($response['results'][0]['place_id']);
-			$this->setPlaceId('ChIJo9W9DOzl30IRvjMkLqWB9iQ');
-			return true;
-		}
-		
-		ShowError(Loc::getMessage('SINTEX_GOOGLE_REVIEWS_NO_FETCHING_PLACE_ID'));
-		
-	}
-	*/
-	
 	protected function fetchReviews()
 	{
 		
@@ -106,7 +78,6 @@ class GoogleReviews extends CBitrixComponent
 		$n = $number;
 		return sprintf($endings[ ($n%100>4 && $n%100<20) ? 2 : $cases[min($n%10, 5)] ], $n);
 	}
-
 
 	public function executeComponent()
 	{
