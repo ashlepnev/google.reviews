@@ -28,7 +28,6 @@ class GoogleReviews extends CBitrixComponent
 
 	protected function fetchReviews()
 	{
-		
 		$url = "https://maps.googleapis.com/maps/api/place/details/json?placeid={$this->arParams["GOOGLE_PLACE_ID"]}&language=ru&key={$this->arParams['GOOGLE_PLACE_API_KEY']}";
 		
 		$httpClient = new HttpClient();
@@ -37,8 +36,6 @@ class GoogleReviews extends CBitrixComponent
 		
 		$responseJSON = $httpClient->getResult();
 		$response = json_decode($responseJSON, true);
-		
-		AddMessage2Log('$response = '.print_r($response, true),'');
 		
 		if ($response['status'] === 'OK')
 		{
@@ -52,7 +49,6 @@ class GoogleReviews extends CBitrixComponent
 		}
 		
 		throw new \Bitrix\Main\SystemException(Loc::getMessage('SINTEX_GOOGLE_REVIEWS_ERROR'));
-
 	}
 	
 	protected function prepareResult()
@@ -88,7 +84,6 @@ class GoogleReviews extends CBitrixComponent
 				$this->arResult = $this->prepareResult();
 				$this->includeComponentTemplate();
 			}
-
 		}
 		catch (SystemException $e)
 		{
