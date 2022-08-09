@@ -84,12 +84,12 @@ Class sintex_googlereviews extends CModule
 	}
 	
 	public function GetPath($notDocumentRoot=false)
-    {
-        if($notDocumentRoot)
-            return str_ireplace(Application::getDocumentRoot(),'',dirname(__DIR__));
-        else
-            return dirname(__DIR__);
-    }
+	{
+		if($notDocumentRoot)
+			return str_ireplace(Application::getDocumentRoot(),'',dirname(__DIR__));
+		else
+			return dirname(__DIR__);
+	}
 	
 	function InstallFiles($arParams = [])
 	{

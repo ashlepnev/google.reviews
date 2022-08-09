@@ -1,15 +1,15 @@
 .sintex-google-reviews {
-    position: relative;
-    margin: 20px auto 20px auto;
-    border: 1px solid #e6e6e6;
-    border-radius: 8px;
-    padding: 20px 20px 32px;
+	position: relative;
+	margin: 20px auto 20px auto;
+	border: 1px solid #e6e6e6;
+	border-radius: 8px;
+	padding: 20px 20px 32px;
 }
 
 .sintex-google-reviews-header-top {
 	display: flex;
-    align-items: center;
-    justify-content: space-between;
+	align-items: center;
+	justify-content: space-between;
 	margin-bottom: 12px;
 }
 
@@ -27,21 +27,21 @@
 
 .sintex-google-reviews-header-name a {
 	display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 20px;
-    text-decoration: none;
-    line-height: 23px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 20px;
+	text-decoration: none;
+	line-height: 23px;
 	font-weight: 500;
 	color: #000;
 }
 
 .sintex-google-reviews-logo {
 	display: flex;
-    align-items: center;
+	align-items: center;
 	font-size: 18px;
-    font-weight: 400;
+	font-weight: 400;
 }
 
 .sintex-google-reviews-logo svg {
@@ -64,8 +64,8 @@
 
 .sintex-google-reviews-header-rating {
 	font-size: 48px;
-    margin-right: 12px;
-    line-height: 56px;
+	margin-right: 12px;
+	line-height: 56px;
 	font-weight: 500;
 }
 
@@ -94,11 +94,11 @@
 
 .sintex-google-reviews-add {
 	display: block;
-    padding: 12px 16px;
-    line-height: 16px;
-    border-radius: 8px;
+	padding: 12px 16px;
+	line-height: 16px;
+	border-radius: 8px;
 	background: #1a6df2;
-    color: #fff;
+	color: #fff;
 	white-space: nowrap;
 }
 
@@ -120,14 +120,14 @@
 
 .sintex-google-review-header {
 	display: flex;
-    margin-bottom: 5px;
+	margin-bottom: 5px;
 }
 
 .sintex-google-review-avatar {
 	width: 40px;
 	height: 40px;
 	margin-right: 12px;
-    text-align: center;
+	text-align: center;
 }
 
 @media (max-width: 480px) {

@@ -13,18 +13,18 @@ Loc::loadMessages(__FILE__);
 class GoogleReviews extends CBitrixComponent
 {
 	public function onPrepareComponentParams($arParams)
-    {
-        if(!isset($arParams["CACHE_TIME"]))
-            $arParams["CACHE_TIME"] = 3600;
+	{
+		if(!isset($arParams["CACHE_TIME"]))
+			$arParams["CACHE_TIME"] = 3600;
 		
 		if (!isset($arParams["GOOGLE_PLACE_ID"]) || empty($arParams["GOOGLE_PLACE_ID"]))
-            ShowError(Loc::getMessage('SINTEX_GOOGLE_REVIEWS_EMPTY_GOOGLE_PLACE_ID'));
+			ShowError(Loc::getMessage('SINTEX_GOOGLE_REVIEWS_EMPTY_GOOGLE_PLACE_ID'));
 		
 		if (!isset($arParams["GOOGLE_PLACE_API_KEY"]) || empty($arParams["GOOGLE_PLACE_API_KEY"]))
-            ShowError(Loc::getMessage('SINTEX_GOOGLE_REVIEWS_EMPTY_GOOGLE_MAPS_API_KEY'));
+			ShowError(Loc::getMessage('SINTEX_GOOGLE_REVIEWS_EMPTY_GOOGLE_MAPS_API_KEY'));
 
-        return $arParams;
-    }
+		return $arParams;
+	}
 
 	protected function fetchReviews()
 	{
